@@ -698,6 +698,161 @@ textarea {
 }
 
 
+/* Contact Section */
+#contact-container {
+   width: 100%;
+   padding: 2rem;
+   background: linear-gradient(to right, #2857a4, #403066);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+/* Contact Header */
+#contact-header {
+   text-align: center;
+   margin-bottom: 2rem;
+}
+
+#contact-header h1 {
+   font-size: 3rem; /* Default size */
+   color: white;
+   text-align: center;
+}
+
+/* Adjust Header Responsiveness */
+@media screen and (max-width: 768px) {
+   #contact-header h1 {
+       font-size: 2.5rem; /* Reduce slightly for tablets */
+   }
+}
+
+@media screen and (max-width: 480px) {
+   #contact-header h1 {
+       font-size: 2rem; /* Reduce further for smaller screens */
+       padding: 0 1rem; /* Add horizontal padding */
+   }
+}
+
+/* Input Fields */
+#input-container {
+   width: 100%;
+   max-width: 500px;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+.input-1 input,
+textarea {
+   width: 100%;
+   border: none;
+   border-bottom: 2px solid white;
+   background: transparent;
+   color: aliceblue;
+   font-size: 1rem;
+   padding: 0.5rem;
+}
+
+textarea {
+   resize: none;
+}
+
+/* Send Button */
+#send-btn {
+   text-align: center;
+   margin-top: 1rem;
+}
+
+#send-btn input {
+   border: 2px solid white;
+   background: transparent;
+   color: white;
+   padding: 0.5rem 1rem;
+   font-size: 1rem;
+   cursor: pointer;
+   transition: color 0.3s ease;
+}
+
+#send-btn input:hover {
+   color: rgb(174, 127, 65);
+}
+
+/* Info Section */
+#info-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   max-width: 500px;
+   text-align: center;
+   margin-top: 2rem;
+   gap: 2rem;
+}
+
+#info-container p {
+   color: white;
+   font-size: 1rem;
+   line-height: 1.6;
+   margin-bottom: 1rem;
+}
+
+/* Address Section */
+#address-container {
+   list-style: none;
+   padding: 0;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 1.5rem;
+}
+
+#address-container li {
+   color: white;
+   text-align: center;
+}
+
+#address-container li a {
+   color: white;
+   font-size: 1.5rem;
+   text-decoration: none;
+}
+
+#address-container li a:hover {
+   color: lightgrey;
+}
+
+/* Social Media Icons */
+.social-icons-2 li a {
+   font-size: 1.5rem;
+   color: white;
+   transition: color 0.3s ease;
+}
+
+.social-icons-2 li a:hover {
+   color: lightgrey;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+   #contact-display {
+       flex-direction: column;
+   }
+}
+
+@media screen and (max-width: 480px) {
+   #info-container p {
+       font-size: 0.9rem;
+   }
+
+   #address-container li {
+       font-size: 0.9rem;
+   }
+}
+
+
+
 /*timeline*/
 .timeline{
    position: relative;
