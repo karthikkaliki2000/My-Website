@@ -1,5 +1,8 @@
 body{
     margin: 0px;
+    height: 100%;
+    width: 100%;
+    align-self: auto;
 }
 
 
@@ -99,6 +102,48 @@ body{
     
    }
 
+   @media screen and (max-width:600px) {
+
+      #lightbox-switch{
+         margin: 0px;
+      }
+
+      #content-box{
+         height: 30%;
+         width: 30%;
+     
+         overflow: hidden;
+        
+      }
+
+      #lightbox {
+         position: relative;
+         top: 0;
+         left: 0;
+         margin-left: 0;
+         height: 100%;
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+       
+       
+     }
+
+      #lightbox-switch a{
+        
+         color: #eae5e5;
+      }
+      
+
+
+
+      #social-container{
+         visibility: hidden;
+      }
+
+      
+   }
 
    /* about */
 
@@ -120,6 +165,35 @@ body{
     border-radius: 50%;
    border: 2px solid #eae5e5;
    box-shadow: 2px 2px 2px 0px lightgrey;
+   }
+
+
+   @media screen and (max-width:600px) {
+      #my-image{
+         height:10rem;
+         width: 10rem;
+         margin: auto;
+         margin-top: -6vh;
+         margin-left: 40%;
+        }
+     
+        #my-image img{
+         height:80%;
+         width: 80%;
+         border-radius: 50%;
+        border: 2px solid #eae5e5;
+        box-shadow: 2px 2px 2px 0px lightgrey;
+        }
+   }
+
+   @media screen and (max-width:250px){
+      #my-image{
+         height:10rem;
+         width: 10rem;
+         margin: auto;
+         margin-top: -8vh;
+         margin-left: 20%;
+        }
    }
 
    #about p{
@@ -251,167 +325,349 @@ margin-left: 10px;
 
 }
 /* contacts */
-#contact-container{
-   height: inherit;
-   width: inherit;
-   background: linear-gradient(to right,#2857a4,#403066); 
+/* Contact Container */
+#contact-container {
+   height: auto;
+   width: 100%;
+   background: linear-gradient(to right, #2857a4, #403066);
    display: flex;
    flex-direction: column;
    justify-content: center;
-  align-items:center ;
+   align-items: center;
    flex-wrap: wrap;
-   
+   padding: 2rem;
 }
 
-#child-contact-container{
-   height: inherit;
-   width: inherit;
-   background: linear-gradient(to right,#2857a4,#403066); 
+/* Child Contact Container */
+#child-contact-container {
+   width: 100%;
+   max-width: 1200px; /* Limit maximum width for better readability */
+   background: linear-gradient(to right, #2857a4, #403066);
    display: flex;
    flex-direction: column;
-
-   flex-wrap: wrap;
    justify-content: center;
-  
+   align-items: center;
+   padding: 1.5rem;
 }
 
-#contact-id,#contact-icon{
+/* Header Styling */
+#contact-id,
+#contact-icon {
    font-size: 40px;
    color: azure;
-     display: inline-block;
-     padding-top: 10px;
-     margin-right: 0.5rem;
-     
-   
+   display: inline-block;
+   padding-top: 10px;
+   margin-right: 0.5rem;
+   text-align: center;
 }
 
-#contact-display{
+/* Contact Display Section */
+#contact-display {
    display: flex;
- 
-   margin-top: -60px;
-   flex-direction: row;
+   flex-wrap: wrap;
    justify-content: space-around;
-  padding: 1rem;
+   padding: 1rem;
+   margin-top: -20px;
 }
 
-#contact-display input,textarea,p,h5{
+/* Input Fields & Textarea Styling */
+#contact-display input,
+textarea {
    background: transparent;
    border: none;
    color: aliceblue;
+   width: 100%;
+   max-width: 400px; /* Ensure inputs are not too wide */
+   height: 2rem;
+   margin: 0.5rem;
+   padding: 0.5rem;
+   border-bottom: 2px solid white;
 }
 
-.h3-contact{
-   color: aliceblue;
+textarea {
+   resize: none;
 }
 
-#contact-display input{
-   width: 400px;
-   height: 1.5rem;
-   border: none;
-
-}
-
-#input-container{
+/* Input Container */
+#input-container {
    display: flex;
    flex-direction: column;
-   
    justify-content: space-between;
-  
    padding: 0.5rem;
-   height: auto;
-   width: 40%;
-    
-  
+   width: 100%;
+   max-width: 500px; /* Limit width for smaller screens */
 }
 
-.input-1{
-   border-bottom: 2px solid white;
-   margin: 2px;
-}
-#send-btn{
+/* Send Button */
+#send-btn {
    align-self: center;
+   margin-top: 1rem;
 }
 
-#send-btn input:hover{
-   
+#send-btn input {
+   border: 2px solid white;
+   box-shadow: 1px 1px 1px 1px whitesmoke;
+   width: 8rem;
+   text-align: center;
+   padding: 0.5rem;
+   color: azure;
+   background: transparent;
+   transition: all 0.3s;
+}
+
+#send-btn input:hover {
    color: rgb(174, 127, 65);
 }
 
-
-#send-btn input{
-  
-   border: 2px solid white;
-   box-shadow: 1px 1px 1px 1px whitesmoke;
-   margin: 2px;
-   text-align: center;
-   margin-top: 1rem;
-   width: 8rem;
-   align-self: center;
-}
-
-#info-container{
+/* Info Container */
+#info-container {
    display: flex;
    flex-direction: column;
-  
-   justify-content: space-between;
    text-align: justify;
-   padding: 0.5rem;
-   height: auto;
-   width: 40%;
-
+   padding: 1rem;
+   max-width: 500px; /* Ensure proper spacing on smaller screens */
 }
 
-#logo-container{
+/* Address Container */
+#address-container {
+   list-style: none;
+   padding-left: 0;
    display: flex;
-   flex-direction: column;
    flex-wrap: wrap;
-   justify-content: space-between;
-   
-   padding: 0.5rem;
-   height: auto;
+   justify-content: center;
+   text-align: center;
+}
+
+#address-container li {
+   margin: 0 10px;
+   display: flex;
+   align-items: center;
+}
+
+#address-container li a {
+   color: antiquewhite;
+   text-decoration: none;
+   transition: color 0.5s;
+}
+
+#address-container li a:hover {
+   color: lightgrey;
+}
+
+#address-container li p {
+   margin-left: 5px;
+   color: aliceblue;
+}
+
+/* Logo Container */
+#logo-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding: 1rem;
    width: 100%;
 }
 
-.social-icons-2 li a{
+.social-icons-2 li a {
    padding: 10px;
-   font-size: 1.2rem;
- 
-   
-  }
-
-
-  #address-container{
-   list-style: none;
-   padding-left: 0px;
-   display: inline-flex;
-  
-}
-#address-container li{
-  display: inline-block;
-  margin: 0px 3px 3px 0px;
-  
+   font-size: 1.5rem;
 }
 
-#address-container li a{
-  color: antiquewhite;
-  text-decoration: none;
-  transition: color 0.5s ;
- 
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+   #contact-display {
+       flex-direction: column; /* Stack sections vertically for tablets */
+   }
 
+   #input-container {
+       width: 100%;
+   }
+
+   #info-container {
+       text-align: center;
+   }
+
+   #contact-id {
+       font-size: 35px;
+   }
 }
 
-#address-container ul li {
+@media screen and (max-width: 480px) {
+   #contact-display {
+       flex-direction: column; /* Stack sections vertically for phones */
+       padding: 1rem;
+   }
+
+   #input-container {
+       width: 100%;
+   }
+
+   #info-container {
+       text-align: center;
+   }
+
+   #contact-id {
+       font-size: 30px;
+   }
+
+   #send-btn input {
+       width: 100%; /* Full width for buttons on smaller screens */
+   }
+}
+/* For "Get into touch" and Address Section Headers */
+.h3-contact {
+   color: white; /* Set headers to white */
+   font-size: 1.5rem;
+   margin-bottom: 1rem;
+   text-align: center;
+}
+
+/* For General Paragraph Text */
+#info-container p {
+   color: white; /* Set paragraph text to white */
+   line-height: 1.6;
+   font-size: 1rem;
+}
+
+/* For Links inside Paragraphs */
+#info-container p a {
+   color: white; /* Set links to white */
+   text-decoration: underline;
+   transition: color 0.3s;
+}
+
+#info-container p a:hover {
+   color: lightgrey; /* Hover effect for links */
+}
+
+/* For Address List Items */
+#address-container li p {
+   color: white; /* Set address text to white */
+   margin-left: 5px;
+}
+
+
+/* General Styling for Get into Touch Section */
+#info-container {
    display: flex;
-   align-items: flex-start;
-  align-items: center;
- 
-  
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   padding: 1.5rem;
+   width: 100%;
+   max-width: 600px; /* Limit width for better readability */
+   margin: 0 auto;
 }
-#address-container ul li p{
-   padding-bottom: 1rem;
- 
-   
+
+/* Paragraph Styling */
+#info-container p {
+   color: white;
+   font-size: 1rem;
+   line-height: 1.6;
+   margin-bottom: 1rem;
 }
+
+#info-container p a {
+   color: white;
+   text-decoration: underline;
+   transition: color 0.3s;
+}
+
+#info-container p a:hover {
+   color: lightgrey;
+}
+
+/* Styling for Address Section */
+#address-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   padding: 1rem;
+   margin-top: 1.5rem;
+}
+
+#address-container li {
+   margin: 0.5rem 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+#address-container li p {
+   margin-left: 8px;
+   color: white;
+   font-size: 1rem;
+}
+
+/* Social Links inside Address Section */
+#address-container li a {
+   color: white;
+   font-size: 1.5rem;
+   margin-right: 8px;
+   text-decoration: none;
+   transition: color 0.3s;
+}
+
+#address-container li a:hover {
+   color: lightgrey;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+   #info-container {
+       padding: 1rem;
+   }
+
+   #address-container li {
+       margin: 0.5rem 0;
+       flex-direction: column;
+       text-align: center;
+   }
+}
+
+@media screen and (max-width: 480px) {
+   #info-container p {
+       font-size: 0.9rem; /* Smaller font size for smaller screens */
+   }
+
+   #address-container li p {
+       font-size: 0.9rem;
+   }
+
+   #address-container li a {
+       font-size: 1.2rem;
+   }
+}
+
+
+/* General Paragraph Styling */
+#info-container p {
+   color: white;
+   font-size: 1rem; /* Default font size */
+   line-height: 1.8;
+   margin-bottom: 1rem;
+   text-align: justify; /* Align text for better readability */
+   word-break: break-word; /* Prevent text overflow */
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media screen and (max-width: 768px) {
+   #info-container p {
+       font-size: 0.95rem; /* Slightly smaller text for tablets */
+       text-align: center; /* Center-align text for narrower screens */
+       padding: 0 1rem; /* Add some padding for spacing */
+   }
+}
+
+@media screen and (max-width: 480px) {
+   #info-container p {
+       font-size: 0.9rem; /* Smaller text for mobile phones */
+       text-align: center; /* Center-align for smaller screens */
+       padding: 0 0.5rem; /* Reduce padding for very small devices */
+   }
+}
+
 
 /*timeline*/
 .timeline{
@@ -502,6 +758,41 @@ margin-left: 10px;
    color: #4f1af0b2;
    margin-top: -2px;
   
+}
+
+
+@media screen and (max-width:600px) {
+
+   .timelinedivider{
+      left:3%;
+
+   }
+
+   .timelinebox{
+      left:7% !important;
+      width:80%;
+
+   }
+
+   .timelinebox::after{
+      left:-10% !important;
+   }
+
+   html{
+      font-size: 1rem;
+   }
+   /* .timelinebox:nth-child(2n+1):after{
+      left:-11%;
+   }
+
+   .timelinebox:nth-child(2n):after{
+      left:-11%;
+   } */
+   /* .time-line-box:nth-child(2n){
+      left:12%;
+     
+      
+   } */
 }
 
 
